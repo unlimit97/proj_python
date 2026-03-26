@@ -24,14 +24,16 @@ jobs:
       with:
         python-version: "3.14"
 
-    - name: Check Python version
-      run: python --version
-
-    - name: Install python library
+    - name: Create virtualenv & install dependencies
       run: |
         python -m venv venv
-        source venv/bin/activate
-        pip install -r requirements.txt
+        ./venv/bin/pip install --upgrade pip
+        ./venv/bin/pip install -r requirements.txt
+
+    - name: Check Python version (from venv)
+      run: |
+        ./venv/bin/python --version
+        ./venv/bin/pip list
 
     - name: Black Duck SCA Scan
       uses: blackduck-inc/black-duck-security-scan@v2
