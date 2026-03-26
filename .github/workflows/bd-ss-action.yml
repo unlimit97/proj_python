@@ -27,8 +27,8 @@ jobs:
           blackducksca_scan_failure_severities: 'BLOCKER,CRITICAL'
           # blackducksca_waitForScan: false
           # detect_search_depth: 2
-          detect_args: '--detect.accuracy.required=NONE --detect.excluded.detector.types=GIT --logging.level.detect=DEBUG'
-          # detect_args: '--detect.excluded.detector.types=GIT --detect.diagnostic=true --logging.level.detect=DEBUG'
+          detect_args: '--detect.diagnostic=true  --detect.excluded.detector.types=GIT --logging.level.detect=DEBUG'
+          # detect_args: '--detect.excluded.detector.types=GIT --detect.diagnostic=true --logging.level.detect=DEBUG --detect.accuracy.required=NONE'
           # detect_config_path: '/Users/Config/application.properties'
           blackducksca_fixpr_enabled: true
           blackducksca_fixpr_maxCount: 5
