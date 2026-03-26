@@ -43,6 +43,7 @@ jobs:
         blackducksca_url: ${{ vars.BLACKDUCK_URL }}
         blackducksca_token: ${{ secrets.BLACKDUCK_TOKEN }}
         blackducksca_scan_failure_severities: BLOCKER
+        detect_args: '--detect.excluded.detector.types=GIT --logging.level.detect=DEBUG'
         blackducksca_fixpr_enabled: true
         blackducksca_prComment_enabled: true
         blackducksca_reports_sarif_create: true
